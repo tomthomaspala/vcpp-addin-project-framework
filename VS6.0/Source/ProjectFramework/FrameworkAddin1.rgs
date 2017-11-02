@@ -1,0 +1,32 @@
+HKCR
+{
+	ProjectFramework.FrameworkAddin1.1 = s 'FrameworkAddin1 Class'
+	{
+		CLSID = s '{E1DD5976-02FF-4316-A061-938854E40101}'
+	}
+	ProjectFramework.FrameworkAddin1 = s 'FrameworkAddin1 Class'
+	{
+		CLSID = s '{E1DD5976-02FF-4316-A061-938854E40101}'
+		CurVer = s 'ProjectFramework.FrameworkAddin1.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E1DD5976-02FF-4316-A061-938854E40101} = s 'FrameworkAddin1 Class'
+		{
+			ProgID = s 'ProjectFramework.FrameworkAddin1.1'
+			VersionIndependentProgID = s 'ProjectFramework.FrameworkAddin1'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{AF3FDC0F-417B-4073-89BA-1AA8D0F2541E}'
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 106'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{6B010AB7-BCD0-4DA5-85C7-E01B0A8E0141}'
+			'Version' = s '1.0'
+		}
+	}
+}

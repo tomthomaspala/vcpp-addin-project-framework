@@ -1,0 +1,54 @@
+// Addin1.idl : IDL source for Addin1.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Addin1.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(E888C30D-BEDE-41B0-B994-E9F60A14D147),
+		dual,
+		helpstring("IFramworkObject1 Interface"),
+		pointer_default(unique)
+	]
+	interface IFramworkObject1 : IDispatch
+	{
+		[id(1), helpstring("method Function2")] HRESULT Function2();
+		[id(2), helpstring("method Function3")] HRESULT Function3();
+	};
+
+[
+	uuid(CE1D7733-0AA5-4F97-8A5A-9C225E4041DF),
+	version(1.0),
+	helpstring("Addin1 1.0 Type Library")
+]
+library ADDIN1Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(21025DA6-316C-4105-999E-B2D0BAE73EE1),
+		helpstring("_IFramworkObject1Events Interface")
+	]
+	dispinterface _IFramworkObject1Events
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(7D551674-7F84-477E-85F3-E16B48AEC20F),
+		helpstring("FramworkObject1 Class")
+	]
+	coclass FramworkObject1
+	{
+		[default] interface IFramworkObject1;
+		[default, source] dispinterface _IFramworkObject1Events;
+	};
+};

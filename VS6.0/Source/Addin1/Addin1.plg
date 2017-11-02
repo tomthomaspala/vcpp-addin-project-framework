@@ -1,0 +1,45 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Addin1 - Win32 Release MinSize--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP136.tmp" with contents
+[
+/nologo /MD /W3 /GX /O1 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_WINDLL" /D "_AFXDLL" /D "_MBCS" /D "_USRDLL" /D "_ATL_DLL" /Fp"ReleaseMinSize/Addin1.pch" /Yu"stdafx.h" /Fo"ReleaseMinSize/" /Fd"ReleaseMinSize/" /FD /c 
+"D:\tom\Projects\Addin Project Framework\Addin1\FramworkObject1.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\tom\LOCALS~1\Temp\RSP136.tmp" 
+Creating temporary file "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP137.tmp" with contents
+[
+/nologo /subsystem:windows /dll /incremental:no /pdb:"ReleaseMinSize/Addin1.pdb" /machine:I386 /def:".\Addin1.def" /out:"ReleaseMinSize/Addin1.dll" /implib:"ReleaseMinSize/Addin1.lib" 
+".\ReleaseMinSize\Addin1.obj"
+".\ReleaseMinSize\FramworkObject1.obj"
+".\ReleaseMinSize\StdAfx.obj"
+".\ReleaseMinSize\Addin1.res"
+".\ReleaseMinSize\ListSalesDlg.obj"
+]
+Creating command line "link.exe @C:\DOCUME~1\tom\LOCALS~1\Temp\RSP137.tmp"
+Creating temporary file "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP138.bat" with contents
+[
+@echo off
+regsvr32 /s /c ".\ReleaseMinSize\Addin1.dll"
+echo regsvr32 exec. time > ".\ReleaseMinSize\regsvr32.trg"
+]
+Creating command line "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP138.bat"
+Compiling...
+FramworkObject1.cpp
+Linking...
+   Creating library ReleaseMinSize/Addin1.lib and object ReleaseMinSize/Addin1.exp
+<h3>Output Window</h3>
+Performing registration
+
+
+
+<h3>Results</h3>
+Addin1.dll - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

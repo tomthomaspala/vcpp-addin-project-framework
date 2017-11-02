@@ -1,0 +1,190 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "1 TYPELIB ""Addin1.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904B0"
+        BEGIN
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "Addin1 Module\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "Addin1\0"
+            VALUE "LegalCopyright", "Copyright 2004\0"
+            VALUE "OriginalFilename", "Addin1.DLL\0"
+            VALUE "ProductName", "Addin1 Module\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "OLESelfRegister", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_FRAMWORKOBJECT1     BITMAP  DISCARDABLE     "framwork.bmp"
+IDR_TOOLBAR_ADDIN1      BITMAP  DISCARDABLE     "toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_FRAMWORKOBJECT1     REGISTRY DISCARDABLE    "FramworkObject1.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR_ADDIN1 TOOLBAR DISCARDABLE  16, 15
+BEGIN
+    BUTTON      ID_BUTTON32768
+    BUTTON      ID_BUTTON32769
+    BUTTON      ID_BUTTON32770
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_SALES DIALOG DISCARDABLE  0, 0, 186, 165
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "List Todays Sales"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_EDIT_HEADING_1,62,27,91,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEADING_2,62,67,91,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_HEADING_3,61,109,91,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,77,144,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,129,144,50,14
+    GROUPBOX        "Please enter all the headings",IDC_STATIC,7,7,172,132
+    LTEXT           "Heading 1",IDC_STATIC,17,30,36,8
+    LTEXT           "Heading 2",IDC_STATIC,18,70,36,8
+    LTEXT           "Heading 3",IDC_STATIC,16,112,36,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_DIALOG_SALES, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 179
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_PROJNAME            "Addin1"
+    IDS_STRING_ADDIN_COMAND_INFO1 
+                            "<ProjectFrameworkAddin>\n\t<AppVer>2</AppVer>\n\t<AddinName> Sales Settings </AddinName>\n\t<ToobarButtonCount> 3 </ToobarButtonCount>\t\n\t<MainMenu>\n\t\t<Name>Report Addin</Name>\n\t\t<ShortcutKeyIndex>2</ShortcutKeyIndex>\n\t\t\t<SubMenu>\n\t\t\t\t<Name>Sales Report </Name>\n\t\t\t\t<ShortcutKeyIndex>2</ShortcutKeyIndex>\n\t\t\t\t<LeafMenu>\n\t\t\t\t\t<Name>Todays sales report</Name>\n\t\t\t\t\t<FunctionName> Function2 </FunctionName>\n\t\t\t\t\t<HelpString> List Todays sales</HelpString>\n\t\t\t\t\t<ToolTip> Todays sales </ToolTip>\n\t\t\t\t\t<ToolBarIndex> 2</ToolBarIndex>\n\t\t\t\t\t<ShortCutKey> Ctrl+B </ShortCutKey>\t\n\t\t\t\t</LeafMenu>\n\t\t\t\t\n\t\t\t\t<LeafMenu>\n\t\t\t\t\t<Name>Canceled sales</Name>\n\t\t\t\t\t<ShortcutKeyIndex>2</ShortcutKeyIndex>\n\t\t\t\t\t<FunctionName> Function3 </FunctionName>\n\t\t\t\t\t<HelpString> List Canceled sales</HelpString>\n\t\t\t\t\t<ToolTip> Canceled sales </ToolTip>\n\t\t\t\t\t<ToolBarIndex> 1</ToolBarIndex>\t\n\t\t\t\t</LeafMenu>\n\n\t\t\t</SubMenu>\n\n\t</MainMenu>"
+    IDS_STRING_ADDIN_COMAND_INFO2 
+                            "<MainMenu>\n\t\t<Name>Settings</Name>\n\t\t\t<SubMenu>\n\t\t\t\t<Name>Sales Settings </Name>\n\t\t\t\t<SubMenu>\n\t\t\t\t\t<Name>Sales Master </Name>\n\t\t\t\t\t<LeafMenu>\n\t\t\t\t\t\t<Name>Manage Sales</Name>\n\t\t\t\t\t\t<FunctionName> Function3 </FunctionName>\n\t\t\t\t\t\t<HelpString>Manage all Sales</HelpString>\n\t\t\t\t\t\t<ToolTip> Manage Sales </ToolTip>\n\t\t\t\t\t\t<ToolBarIndex> 0</ToolBarIndex>\t\n\t\t\t\t\t</LeafMenu>\n\t\t\t\t</SubMenu>\n\t\t\t\t\n\t\t\t</SubMenu>\n\n\t</MainMenu>\n\t\n</ProjectFrameworkAddin>\n\n"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "Addin1.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,42 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: ProjectFramework - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP188.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_MBCS" /D "_AFXDLL" /FR"Debug/" /Fp"Debug/ProjectFramework.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\tom\Projects\Addin Project Framework\ProjectFramework\ProjectFramework.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\tom\LOCALS~1\Temp\RSP188.tmp" 
+Creating temporary file "C:\DOCUME~1\tom\LOCALS~1\Temp\RSP189.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/ProjectFramework.pdb" /debug /machine:I386 /out:"Debug/ProjectFramework.exe" /pdbtype:sept 
+".\Debug\AddinManager.obj"
+".\Debug\AddinSettingsDialog.obj"
+".\Debug\FrameworkAddin1.obj"
+".\Debug\MainFrm.obj"
+".\Debug\ProjectFramework.obj"
+".\Debug\ProjectFrameworkAddin.obj"
+".\Debug\ProjectFrameworkDoc.obj"
+".\Debug\ProjectFrameworkExt.obj"
+".\Debug\ProjectFrameworkView.obj"
+".\Debug\StdAfx.obj"
+".\Debug\ProjectFramework.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\tom\LOCALS~1\Temp\RSP189.tmp"
+<h3>Output Window</h3>
+Compiling...
+ProjectFramework.cpp
+Linking...
+
+
+
+<h3>Results</h3>
+ProjectFramework.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

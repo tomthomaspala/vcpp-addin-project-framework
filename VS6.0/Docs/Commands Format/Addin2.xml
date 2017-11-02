@@ -1,0 +1,53 @@
+
+
+<ProjectFrameworkAddin>
+	<AppVer>2</AppVer>
+	<AddinName> Report Addin </AddinName>
+	<ToobarButtonCount> 3 </ToobarButtonCount>	
+	<MainMenu>
+		<Name>Addin11 Menu</Name>
+			<SubMenu>
+				<Name>Submenu name </Name>		
+				<LeafMenu>
+					<Name>Leafmenu 1</Name>
+					<FunctionName> Function1 </FunctionName>
+					<HelpString> Some status bar Help Desc</HelpString>
+					<ToolTip> Tooltip Desc 1 </ToolTip>
+					<ToolBarIndex> 2</ToolBarIndex>
+					<ShortCutKey> Ctrl+A </ShortCutKey>	
+				</LeafMenu>
+				
+				<LeafMenu>
+					<Name>Leafmenu 2</Name>
+					<FunctionName> Function1 </FunctionName>
+					<HelpString> Some status bar Help Desc</HelpString>
+					<ToolTip> Tooltip Desc 1 </ToolTip>
+					<ToolBarIndex> 2</ToolBarIndex>
+					<Separator>1</Separator>	
+				</LeafMenu>
+
+			</SubMenu>
+
+	</MainMenu>
+	
+	<MainMenu>
+		<Name>Addin12 Menu</Name>
+			<SubMenu>
+				<Name>Submenu name </Name>
+				<SubMenu>
+					<Name>Submenu name </Name>
+					<LeafMenu>
+						<Name>Leafmenu 1</Name>
+						<FunctionName> Function1 </FunctionName>
+						<HelpString>Status bar Help Desc</HelpString>
+						<ToolTip> Tooltip Desc 1 </ToolTip>
+						<ToolBarIndex> 2</ToolBarIndex>	
+					</LeafMenu>
+				</SubMenu>
+				
+			</SubMenu>
+
+	</MainMenu>
+	
+</ProjectFrameworkAddin>
+

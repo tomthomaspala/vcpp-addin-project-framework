@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{AF3FDC0F-417B-4073-89BA-1AA8D0F2541E} = s 'ProjectFramework'
+		'ProjectFramework.EXE'
+		{
+			val AppID = s {AF3FDC0F-417B-4073-89BA-1AA8D0F2541E}
+		}
+	}
+}

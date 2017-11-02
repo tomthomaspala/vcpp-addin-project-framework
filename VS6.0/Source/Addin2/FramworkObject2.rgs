@@ -1,0 +1,34 @@
+HKCR
+{
+	Addin2.FramworkObject2.1 = s 'FramworkObject2 Class'
+	{
+		CLSID = s '{76E278FD-DCDF-497E-8602-E7295F26AC99}'
+	}
+	Addin2.FramworkObject2 = s 'FramworkObject2 Class'
+	{
+		CLSID = s '{76E278FD-DCDF-497E-8602-E7295F26AC99}'
+		CurVer = s 'Addin2.FramworkObject2.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {76E278FD-DCDF-497E-8602-E7295F26AC99} = s 'FramworkObject2 Class'
+		{
+			ProgID = s 'Addin2.FramworkObject2.1'
+			VersionIndependentProgID = s 'Addin2.FramworkObject2'
+			ForceRemove 'Programmable'
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			ForceRemove 'Control'
+			ForceRemove 'Insertable'
+			ForceRemove 'ToolboxBitmap32' = s '%MODULE%, 102'
+			'MiscStatus' = s '0'
+			{
+			    '1' = s '131473'
+			}
+			'TypeLib' = s '{4E44416A-FB80-4318-B1AC-E4EE10CD372C}'
+			'Version' = s '1.0'
+		}
+	}
+}

@@ -1,0 +1,108 @@
+
+	// ProjectFramework.idl : IDL source for ProjectFramework.exe
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (ProjectFramework.tlb) and marshalling code.
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	[
+		object,
+		uuid(5B185FA1-FFCD-45E5-AAD0-58E396E5C444),
+		dual,
+		helpstring("IProjectFramework Interface"),
+		pointer_default(unique)
+	]
+	interface IProjectFramework : IDispatch
+	{
+		[id(1), helpstring("method SetAddInInfo")] HRESULT SetAddInInfo(long lSessionID, long lInstanceHandle, BSTR strXMLMenuToolbarIDCmdInfo, long lToobarRes);
+		[id(2), helpstring("method LoadAllAdins")] HRESULT LoadAllAdins(BSTR strAddinLoadingInfo);
+		[propget, id(3), helpstring("property MainWindow")] HRESULT MainWindow([out, retval] long *pVal);
+		[id(4), helpstring("method SetAddinToolbar")] HRESULT SetAddinToolbar(long lAddinIndex, VARIANT varValue);
+		[id(5), helpstring("method SetViewHeading")] HRESULT SetViewHeading(BSTR strHeading1, BSTR strHeading2,BSTR strHeading3);
+		[id(6), helpstring("method SendStatus")] HRESULT SendStatus(BSTR strStatus);
+	};
+[
+	uuid(6B010AB7-BCD0-4DA5-85C7-E01B0A8E0141),
+	version(1.0),
+	helpstring("ProjectFramework 1.0 Type Library")
+]
+library ProjectFrameworkLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+	[
+		uuid(752251EA-F05F-4BE2-BC79-B0044E4C6EC5),
+		helpstring("_IProjectFrameworkEvents Interface")
+	]
+	dispinterface _IProjectFrameworkEvents
+	{
+		properties:
+		methods:
+		[id(1), helpstring("method NotifyStatus")] HRESULT NotifyStatus(BSTR strStatus);
+	};
+	
+	[
+		object,
+		uuid(DE70B3B4-26A9-4BCD-B642-4084BFFC252A),
+		helpstring("IProjectFrameworkAddin Interface"),
+		pointer_default(unique)
+	]
+	interface IProjectFrameworkAddin : IUnknown
+	{
+		[helpstring("method Initialize")] HRESULT Initialize(long lSessionID, IProjectFramework *pApp, VARIANT bFirstTime);
+		[helpstring("method Uninitialize")] HRESULT Uninitialize(long lSessionID);
+	};
+	
+
+	[
+		object,
+		uuid(275E4F9E-3CF5-40CA-819E-152676DDB72E),
+		dual,
+		helpstring("IFrameworkAddin1 Interface"),
+		pointer_default(unique)
+	]
+	interface IFrameworkAddin1 : IDispatch
+	{
+	};
+
+	[
+		uuid(AC8B0EC6-C6D1-4E5E-8CBF-4C7161E92231),
+		helpstring("ProjectFramework Class")
+	]
+	coclass ProjectFramework
+	{
+		[default] interface IProjectFramework;
+		[default, source] dispinterface _IProjectFrameworkEvents;
+	};
+	
+	[
+		uuid(9DF9FC32-65CF-4B49-860D-FC3321F14915),
+		helpstring("ProjectFrameworkAddin Class")
+	]
+	coclass ProjectFrameworkAddin
+	{
+		[default] interface IProjectFrameworkAddin;
+	};
+	[
+		uuid(E00EC30D-2ED8-46D6-B7A0-5E685B3E5DC8),
+		helpstring("_IFrameworkAddin1Events Interface")
+	]
+	dispinterface _IFrameworkAddin1Events
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(E1DD5976-02FF-4316-A061-938854E40101),
+		helpstring("FrameworkAddin1 Class")
+	]
+	coclass FrameworkAddin1
+	{
+		[default] interface IFrameworkAddin1;
+		[default, source] dispinterface _IFrameworkAddin1Events;
+	};
+};
+
+	

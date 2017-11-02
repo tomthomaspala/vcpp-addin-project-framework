@@ -1,0 +1,130 @@
+// Created by Microsoft (R) C/C++ Compiler Version 12.00.8168.0 (eea0ce23).
+//
+// ProjectFramework.tlh
+//
+// C++ source equivalent of Win32 type library ..\TLB\ProjectFramework.tlb
+// compiler-generated file created 11/19/04 at 16:27:51 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("752251ea-f05f-4be2-bc79-b0044e4c6ec5"))
+/* dispinterface */ _IProjectFrameworkEvents;
+struct __declspec(uuid("de70b3b4-26a9-4bcd-b642-4084bffc252a"))
+/* interface */ IProjectFrameworkAddin;
+struct __declspec(uuid("5b185fa1-ffcd-45e5-aad0-58e396e5c444"))
+/* dual interface */ IProjectFramework;
+struct __declspec(uuid("275e4f9e-3cf5-40ca-819e-152676ddb72e"))
+/* dual interface */ IFrameworkAddin1;
+struct /* coclass */ ProjectFramework;
+struct /* coclass */ ProjectFrameworkAddin;
+struct __declspec(uuid("e00ec30d-2ed8-46d6-b7a0-5e685b3e5dc8"))
+/* dispinterface */ _IFrameworkAddin1Events;
+struct /* coclass */ FrameworkAddin1;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(_IProjectFrameworkEvents, __uuidof(IDispatch));
+_COM_SMARTPTR_TYPEDEF(IProjectFrameworkAddin, __uuidof(IProjectFrameworkAddin));
+_COM_SMARTPTR_TYPEDEF(IProjectFramework, __uuidof(IProjectFramework));
+_COM_SMARTPTR_TYPEDEF(IFrameworkAddin1, __uuidof(IFrameworkAddin1));
+_COM_SMARTPTR_TYPEDEF(_IFrameworkAddin1Events, __uuidof(IDispatch));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("752251ea-f05f-4be2-bc79-b0044e4c6ec5"))
+_IProjectFrameworkEvents : IDispatch
+{};
+
+struct __declspec(uuid("de70b3b4-26a9-4bcd-b642-4084bffc252a"))
+IProjectFrameworkAddin : IUnknown
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall Initialize (
+        long lSessionID,
+        struct IProjectFramework * pApp,
+        VARIANT bFirstTime ) = 0;
+    virtual HRESULT __stdcall Uninitialize (
+        long lSessionID ) = 0;
+};
+
+struct __declspec(uuid("5b185fa1-ffcd-45e5-aad0-58e396e5c444"))
+IProjectFramework : IDispatch
+{
+    //
+    // Raw methods provided by interface
+    //
+
+    virtual HRESULT __stdcall SetAddInInfo (
+        long lSessionID,
+        long lInstanceHandle,
+        BSTR strXMLMenuToolbarIDCmdInfo,
+        long lToobarRes ) = 0;
+    virtual HRESULT __stdcall LoadAllAdins (
+        BSTR strAddinLoadingInfo ) = 0;
+    virtual HRESULT __stdcall get_MainWindow (
+        long * pVal ) = 0;
+    virtual HRESULT __stdcall SetAddinToolbar (
+        long lAddinIndex,
+        VARIANT varValue ) = 0;
+};
+
+struct __declspec(uuid("275e4f9e-3cf5-40ca-819e-152676ddb72e"))
+IFrameworkAddin1 : IDispatch
+{};
+
+struct __declspec(uuid("ac8b0ec6-c6d1-4e5e-8cbf-4c7161e92231"))
+ProjectFramework;
+    // [ default ] interface IProjectFramework
+    // [ default, source ] dispinterface _IProjectFrameworkEvents
+
+struct __declspec(uuid("9df9fc32-65cf-4b49-860d-fc3321f14915"))
+ProjectFrameworkAddin;
+    // [ default ] interface IProjectFrameworkAddin
+
+struct __declspec(uuid("e00ec30d-2ed8-46d6-b7a0-5e685b3e5dc8"))
+_IFrameworkAddin1Events : IDispatch
+{};
+
+struct __declspec(uuid("e1dd5976-02ff-4316-a061-938854e40101"))
+FrameworkAddin1;
+    // [ default ] interface IFrameworkAddin1
+    // [ default, source ] dispinterface _IFrameworkAddin1Events
+
+//
+// Named GUID constants initializations
+//
+
+extern "C" const GUID __declspec(selectany) LIBID_ProjectFrameworkLib =
+    {0x6b010ab7,0xbcd0,0x4da5,{0x85,0xc7,0xe0,0x1b,0x0a,0x8e,0x01,0x41}};
+extern "C" const GUID __declspec(selectany) DIID__IProjectFrameworkEvents =
+    {0x752251ea,0xf05f,0x4be2,{0xbc,0x79,0xb0,0x04,0x4e,0x4c,0x6e,0xc5}};
+extern "C" const GUID __declspec(selectany) IID_IProjectFrameworkAddin =
+    {0xde70b3b4,0x26a9,0x4bcd,{0xb6,0x42,0x40,0x84,0xbf,0xfc,0x25,0x2a}};
+extern "C" const GUID __declspec(selectany) IID_IProjectFramework =
+    {0x5b185fa1,0xffcd,0x45e5,{0xaa,0xd0,0x58,0xe3,0x96,0xe5,0xc4,0x44}};
+extern "C" const GUID __declspec(selectany) IID_IFrameworkAddin1 =
+    {0x275e4f9e,0x3cf5,0x40ca,{0x81,0x9e,0x15,0x26,0x76,0xdd,0xb7,0x2e}};
+extern "C" const GUID __declspec(selectany) CLSID_ProjectFramework =
+    {0xac8b0ec6,0xc6d1,0x4e5e,{0x8c,0xbf,0x4c,0x71,0x61,0xe9,0x22,0x31}};
+extern "C" const GUID __declspec(selectany) CLSID_ProjectFrameworkAddin =
+    {0x9df9fc32,0x65cf,0x4b49,{0x86,0x0d,0xfc,0x33,0x21,0xf1,0x49,0x15}};
+extern "C" const GUID __declspec(selectany) DIID__IFrameworkAddin1Events =
+    {0xe00ec30d,0x2ed8,0x46d6,{0xb7,0xa0,0x5e,0x68,0x5b,0x3e,0x5d,0xc8}};
+extern "C" const GUID __declspec(selectany) CLSID_FrameworkAddin1 =
+    {0xe1dd5976,0x02ff,0x4316,{0xa0,0x61,0x93,0x88,0x54,0xe4,0x01,0x01}};
+
+#pragma pack(pop)

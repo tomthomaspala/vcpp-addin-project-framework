@@ -1,0 +1,21 @@
+HKCR
+{
+	ProjectFramework.ProjectFrameworkAddin.1 = s 'ProjectFrameworkAddin Class'
+	{
+		CLSID = s '{9DF9FC32-65CF-4B49-860D-FC3321F14915}'
+	}
+	ProjectFramework.ProjectFrameworkAddin = s 'ProjectFrameworkAddin Class'
+	{
+		CLSID = s '{9DF9FC32-65CF-4B49-860D-FC3321F14915}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {9DF9FC32-65CF-4B49-860D-FC3321F14915} = s 'ProjectFrameworkAddin Class'
+		{
+			ProgID = s 'ProjectFramework.ProjectFrameworkAddin.1'
+			VersionIndependentProgID = s 'ProjectFramework.ProjectFrameworkAddin'
+			val AppID = s '{AF3FDC0F-417B-4073-89BA-1AA8D0F2541E}'
+			LocalServer32 = s '%Module%'
+		}
+	}
+}

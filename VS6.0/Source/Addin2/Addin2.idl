@@ -1,0 +1,53 @@
+// Addin2.idl : IDL source for Addin2.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (Addin2.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+#include "olectl.h"
+	
+
+	[
+		object,
+		uuid(A6F55852-9E39-4CB3-A581-3D905F518499),
+		dual,
+		helpstring("IFramworkObject2 Interface"),
+		pointer_default(unique)
+	]
+	interface IFramworkObject2 : IDispatch
+	{
+		[id(1), helpstring("method Function1")] HRESULT Function1();
+	};
+
+[
+	uuid(4E44416A-FB80-4318-B1AC-E4EE10CD372C),
+	version(1.0),
+	helpstring("Addin2 1.0 Type Library")
+]
+library ADDIN2Lib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(2F1ACFB5-514F-4188-9FD8-20E2428178F6),
+		helpstring("_IFramworkObject2Events Interface")
+	]
+	dispinterface _IFramworkObject2Events
+	{
+		properties:
+		methods:
+	};
+
+	[
+		uuid(76E278FD-DCDF-497E-8602-E7295F26AC99),
+		helpstring("FramworkObject2 Class")
+	]
+	coclass FramworkObject2
+	{
+		[default] interface IFramworkObject2;
+		[default, source] dispinterface _IFramworkObject2Events;
+	};
+};

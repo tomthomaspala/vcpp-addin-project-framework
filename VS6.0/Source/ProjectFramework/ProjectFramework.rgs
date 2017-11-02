@@ -1,0 +1,35 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{AF3FDC0F-417B-4073-89BA-1AA8D0F2541E} = s 'ProjectFramework'
+		'ProjectFramework.EXE'
+		{
+			val AppID = s {AF3FDC0F-417B-4073-89BA-1AA8D0F2541E}
+		}
+	}
+}
+HKCR
+{
+	ProjectFramework.ProjectFramework.1 = s 'ProjectFramework Class'
+	{
+		CLSID = s '{AC8B0EC6-C6D1-4E5E-8CBF-4C7161E92231}'
+	}
+	ProjectFramework.ProjectFramework = s 'ProjectFramework Class'
+	{
+		CLSID = s '{AC8B0EC6-C6D1-4E5E-8CBF-4C7161E92231}'
+		CurVer = s 'ProjectFramework.ProjectFramework.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {AC8B0EC6-C6D1-4E5E-8CBF-4C7161E92231} = s 'ProjectFramework Class'
+		{
+			ProgID = s 'ProjectFramework.ProjectFramework.1'
+			VersionIndependentProgID = s 'ProjectFramework.ProjectFramework'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{AF3FDC0F-417B-4073-89BA-1AA8D0F2541E}'
+			'TypeLib' = s '{6B010AB7-BCD0-4DA5-85C7-E01B0A8E0141}'
+		}
+	}
+}
