@@ -2,7 +2,7 @@
 VC++ Addin Project Framework 
 =============================
 
-This Section will contain the VC++ Addin Projcet Framewoks including the Orginal Framework Developed in VC++ 6.0 and Published in 2004 at http://www.codeproject.com on this link below
+This Section will contain the VC++ Addin Projcet Framewoks including the Orginal Framework Developed in VC++ 6.0 and Published on 2004 at http://www.codeproject.com on this link below
 
 https://www.codeproject.com/Articles/8955/ATL-COM-Based-Addin-Plugin-Framework-With-Dynamic
 
